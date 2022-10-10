@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Francois+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Francois One', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgb(4, 15, 32);
+    height: 100vh;
+
+}
+
+h1 {
+    font-size: 4rem;
+    padding: 2rem;
+    color: #fff;
+    text-shadow: rgb(146, 8, 27) 4px 4px 50px;
+    margin-top: 2rem;
+    letter-spacing: 3px;
+    font-family: 'Bangers', cursive;
+    animation: titleAnimate 7s infinite;
+}
+
+@keyframes titleAnimate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: centers;
+    width: 90vw;
+    gap: 2rem;
+}
+
+.card:nth-child(1) {
+    background-image: url('img/Gul\'dan.jpg');
+}
+
+.card:nth-child(2) {
+    background-image: url('img/Illidan.jpg');
+}
+
+.card:nth-child(3) {
+    background-image: url('img/Jaina-Proudmoore.jpg');
+}
+
+.card:nth-child(4) {
+    background-image: url('img/Garrosh-Hellscream.jpg');
+}
+
+.card:nth-child(5) {
+    background-image: url('img/Sylvanas.jpg');
+}
+
+.card:nth-child(6) {
+    background-image: url('img/Deathwing.jpg');
+}
+
+.card {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 80vh;
+    border-radius: 3.5rem;
+    flex: 0.3;
+    position: relative;
+    transition: flex 0.5s ease-in-out;
+}
+
+.content {
+    position: absolute;
+    bottom: 5rem;
+    left: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
+    color: #fff;
+    opacity: 0;
+
+}
+
+.description {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #070707;
+    background-color: rgba(255, 255, 255, 0.363);
+    border-radius: 2rem;
+    width: 85rem;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+
+.card.active {
+    flex: 7;
+}
+
+.card.active .title {
+    opacity: 1;
+}
+
+.card.active .description {
+    opacity: 1;
+}
+
+@media(max-width:2175px) {
+    .card:nth-child(1) {
+        background-position: right;
+    }
+}
+
+@media(max-width:1345px) {
+    .description {
+        width: 55rem;
+    }
+
+    .card:nth-child(2) {
+        background-position: left center;
+    }
+
+}
+
+@media(max-width:937px) {
+    .description {
+        width: 45rem;
+        font-size: 1.6rem;
+    }
+
+}
+
+@media(max-width:777px) {
+    .description {
+        width: 35rem;
+        font-size: 1.6rem;
+    }
+
+}
+
+@media(max-width:638px) {
+    .description {
+        width: 25rem;
+        font-size: 1.6rem;
+    }
+
+    .content {
+        bottom: 2rem;
+        left: 1rem;
+    }
+}
+
+@media(max-width:638px) {
+    .description {
+        display: none;
+    }
+
+}
